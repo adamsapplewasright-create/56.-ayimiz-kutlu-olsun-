@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title> 56.Ayımız Kutlu Olsun 🌟</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: "Segoe UI", sans-serif;
+      overflow: hidden;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.85);
+      padding: 40px 50px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      text-align: center;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: #e63946;
+    }
+
+    p {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>❤️ 56. Ayımız Kutlu Olsun ❤️</h1>
+    <p>Seni seviyorum</p>
+  </div>
+
+  <script>
+    window.onload = function () {
+      confetti({
+        particleCount: 250,
+        spread: 160,
+        origin: { y: 0.6 }
+      });
+
+      setTimeout(() => {
+        confetti({
+          particleCount: 100,
+          angle: 60,
+          spread: 80,
+          origin: { x: 0 }
+        });
+        confetti({
+          particleCount: 100,
+          angle: 120,
+          spread: 80,
+          origin: { x: 1 }
+        });
+      }, 500);
+    };
+  </script>
+
+</body>
+</html>
